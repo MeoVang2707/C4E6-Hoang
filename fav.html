@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favourite</title>
+</head>
+<body>
+
+<h1>Sở thích của từng người trong C4E:</h1>
+{%for person in person_list %}
+    <h2> {{ person.name }}: {{ person.like }}</h2>
+    {%for i in range(3) %}
+        <p>+ <a href="{{ person.list[i]["Next"] }}">{{ person.list[i]["Title"] }} </a>: {{ person.list[i]["Description"] }} </p>
+        <img width="400px" height="210px" src="{{ person.list[i]["Image"] }}">
+    {% endfor %}
+{% endfor %}
+
+</body>
+</html>
