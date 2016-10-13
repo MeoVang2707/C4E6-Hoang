@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="http://cms.lichngaytot.com/medias/standard/2015/4/2/Ten-chu-H-(P2).jpg" />
+<title>Add_favourite</title>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=file], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+<div>
+    <a href="http://127.0.0.1:5000">
+        <img src="http://vignette2.wikia.nocookie.net/dragonball/images/f/f3/Kid_goku_by_maffo1989-d4853um.png/revision/latest?cb=20140214210909"
+                 alt="Avatar" style="width:10%" class="w3-circle w3-margin-top">
+    </a>
+    <a href="http://127.0.0.1:5000/logout"><button class="w3-btn" align="right">Logout</button></a>
+</div>
+
+<h2>Thêm các món ăn ưa thích nào</h2>
+<div>
+  <form method="post" action="{{ url_for("add_fav") }}" enctype="multipart/form-data">
+    <label>Title:</label>
+    <input type="text" name="Title">
+
+    <label>Description:</label>
+    <input type="text" name="Description">
+
+    <label>Link web of food:</label>
+    <input type="text" name="Link">
+
+
+    <label for="country">Select image</label>
+    <input type="file" name="Image"><br>
+
+
+    <input type="submit" value="Add">
+  </form>
+</div>
+
+</body>
+</html>
+
